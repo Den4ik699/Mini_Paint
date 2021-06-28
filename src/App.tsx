@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {rootReducer} from './reducers'
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import {composeWithDevTools} from "redux-devtools-extension";
+import MainPageContainer from "./Components/MainPage/MainPageContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const store = createStore(rootReducer, composeWithDevTools());
+
+
+const App = () => {
+    return (
+        <Provider store={store}>
+            <MainPageContainer/>
+            {/*<AuthContainer/>*/}
+            {/*<TestComp/>*/}
+        </Provider>
+    );
 }
 
 export default App;

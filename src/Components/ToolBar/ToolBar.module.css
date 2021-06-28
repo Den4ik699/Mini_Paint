@@ -1,0 +1,28 @@
+.toolItem {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.toolItem:hover {
+    opacity: 30%;
+}
+
+.tools {
+    position: absolute;
+    margin-top: 100px;
+}
+
+.line {
+    width: 25px;
+    padding-left: 3px;
+}
+
+.changeColor {
+    padding-left: 3px;
+    width: 30px;
+}
+
+.inputWidth {
+    padding-left: 3px;
+    width: 100px;
+}
