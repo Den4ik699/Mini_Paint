@@ -4,6 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import {reduxForm, Field, WrappedFieldProps, InjectedFormProps} from "redux-form";
+import {Link} from 'react-router-dom'
 //import styles from '../Auth.module.css'
 
 // export interface IFormProps {
@@ -50,12 +51,15 @@ export const AuthForm: React.FC<InjectedFormProps & ILogInFormProps & any> = pro
                 </FormControl>
             </div>
 
-            <Button
-                // className={styles.authBtn}
-                variant="contained"
-                color="secondary">
-                Log In
-            </Button>
+            <Link to='/main'>
+                <Button
+                    // className={styles.authBtn}
+                    variant="contained"
+                    color="secondary">
+                    Log In
+                </Button>
+            </Link>
+
         </form>
     );
 };
@@ -66,7 +70,7 @@ const Auth = (props: any) => {
     }
     return (
         <div className="">
-            <ReduxAuthForm onSubmit = {login} login = 'sad'/>
+            <ReduxAuthForm onSubmit={login} login='sad'/>
         </div>
     );
 }

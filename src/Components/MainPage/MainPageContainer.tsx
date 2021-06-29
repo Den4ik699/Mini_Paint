@@ -3,7 +3,6 @@ import MainPage from "./MainPage";
 
 const MainPageContainer = () => {
     const [color, setColor] = useState("#000000");
-
     const [widthLine, setWidthLine] = useState(8);
 
     const onChangeWidth = (event: any) => {

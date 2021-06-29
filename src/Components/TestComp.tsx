@@ -9,6 +9,7 @@ const TestComp = () => {
     console.log(user);
     const dispatch = useDispatch()
 
+    //console.log(hi);
 
     useEffect(() => {
         dispatch(setUserActionCreator({ name: 'Bob', age: 20 }))

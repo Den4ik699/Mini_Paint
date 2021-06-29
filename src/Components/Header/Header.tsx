@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 
 const Header = () => {
     return (
@@ -6,10 +8,12 @@ const Header = () => {
             <div className="nav-wrapper #212121 grey darken-4">
                 <a href="#" className="brand-logo">Mini Paint</a>
                 <ul id="nav-mobile" className="right">
-                    <a className="waves-effect waves-light btn #5e35b1 deep-purple darken-1">Sign Out</a>
+                    <Link className="waves-effect waves-light btn #5e35b1 deep-purple darken-1" to='/'>Sign Out
+                    </Link>
                 </ul>
             </div>
         </nav>
+
     );
 };
 
