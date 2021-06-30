@@ -7,7 +7,11 @@ import {IColor} from "../MainPage/MainPage";
 
 const style = require('./ToolBar.module.css');
 
-const ToolBar: React.FC<IColor> = ({color, setColor, widthLine, onChangeWidth}) => {
+const ToolBar: React.FC<IColor> = ({
+                                       color, setColor, widthLine,
+                                       onChangeWidth, addRectangle, addPencil,
+                                       addLine, addCircle
+                                   }) => {
 
     const [open, setOpen] = useState(false);
 
@@ -26,17 +30,72 @@ const ToolBar: React.FC<IColor> = ({color, setColor, widthLine, onChangeWidth}) 
     return (
         <div className={style.tools}>
             <div className={style.toolItem}>
-                <RadioButtonUncheckedIcon fontSize={"large"}/>
+                <RadioButtonUncheckedIcon fontSize={"large"} onClick={() => {
+                    if (addRectangle) {
+                        addRectangle(false)
+                    }
+                    if (addPencil) {
+                        addPencil(false)
+                    }
+                    if (addLine) {
+                        addLine(false)
+                    }
+                    if (addCircle) {
+                        addCircle(true)
+                    }
+                }}
+                />
             </div>
             <div className={style.toolItem}>
-                <Crop169Icon fontSize={"large"}/>
+                <Crop169Icon fontSize={"large"} onClick={() => {
+                    if (addRectangle) {
+                        addRectangle(true)
+                    }
+                    if (addPencil) {
+                        addPencil(false)
+                    }
+                    if (addLine) {
+                        addLine(false)
+                    }
+                    if (addCircle) {
+                        addCircle(false)
+                    }
+                }}/>
             </div>
             <div className={style.toolItem}>
-                <CreateIcon fontSize={"large"}/>
+                <CreateIcon fontSize={"large"} onClick={() => {
+                    if (addRectangle) {
+                        addRectangle(false)
+                    }
+                    if (addPencil) {
+                        addPencil(true)
+                    }
+                    if (addLine) {
+                        addLine(false)
+                    }
+                    if(addCircle) {
+                        addCircle(false)
+                    }
+                }}/>
             </div>
 
             <div className={`${style.toolItem}`}>
-                <img className={style.line} src="https://image.flaticon.com/icons/png/512/815/815497.png" alt=""/>
+                <img className={style.line} src="https://image.flaticon.com/icons/png/512/815/815497.png" alt=""
+                     onClick={() => {
+                         if (addRectangle) {
+                             addRectangle(false)
+                         }
+                         if (addPencil) {
+                             addPencil(false)
+                         }
+                         if (addLine) {
+                             addLine(true)
+                         }
+                         if (addCircle) {
+                             addCircle(false)
+                         }
+                     }}/>
+
             </div>
 
             <div className={style.toolItem}

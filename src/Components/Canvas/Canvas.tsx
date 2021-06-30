@@ -17,7 +17,10 @@ const Canvas = (props: ICanvasProps) => {
                     onMouseDown={props.startDrawingFunction}
                     onMouseUp={props.endDrawingFunction}
                     onMouseMove={props.draw}
-                    ref={props.canvasRef}>
+                    ref={props.canvasRef}
+                    width={600}
+                    height={600}
+            >
             </canvas>
         </div>
 
