@@ -8,7 +8,7 @@ const MainPageContainer = () => {
     const [color, setColor] = useState("#000000");
     const [widthLine, setWidthLine] = useState(5);
 
-    const onChangeWidth = (event: any) => {
+    const onChangeWidth = (event) => {
         setWidthLine(event.target.value)
     }
 

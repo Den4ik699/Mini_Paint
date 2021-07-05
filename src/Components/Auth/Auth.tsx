@@ -5,7 +5,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import {reduxForm, Field, WrappedFieldProps, InjectedFormProps} from "redux-form";
 import {Link} from 'react-router-dom'
-//import styles from '../Auth.module.css'
+
+const style = require('./Auth.module.css')
 
 // export interface IFormProps {
 //     username: string;
@@ -36,24 +37,27 @@ interface ITextFieldProps {
 
 
 export const AuthForm: React.FC<InjectedFormProps & ILogInFormProps & any> = props => {
+
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <FormControl>
-                    <InputLabel htmlFor="input-login">Login</InputLabel>
-                    <Field component={InputForm} type={'text'} name={'login'}/>
-                </FormControl>
+                <input placeholder='Login' type="text"/>
+                {/*<FormControl>*/}
+                {/*    <InputLabel htmlFor="input-login">Login</InputLabel>*/}
+                {/*    <Field component={InputForm} type={'text'} name={'login'}/>*/}
+                {/*</FormControl>*/}
             </div>
             <div>
-                <FormControl>
-                    <InputLabel htmlFor="input-password">Password</InputLabel>
-                    <Field component={InputForm} type={'text'} name={'password'}/>
-                </FormControl>
+                <input type="password" placeholder="password"/>
+                {/*<FormControl>*/}
+                {/*    <InputLabel htmlFor="input-password">Password</InputLabel>*/}
+                {/*    <Field component={InputForm} type={'text'} name={'password'}/>*/}
+                {/*</FormCoa*/}
             </div>
 
             <Link to='/main'>
                 <Button
-                    // className={styles.authBtn}
+                    className={style.authBtn}
                     variant="contained"
                     color="secondary">
                     Log In
@@ -69,7 +73,7 @@ const Auth = (props: any) => {
         alert('Logged in')
     }
     return (
-        <div className="">
+        <div className={style.authContainer}>
             <ReduxAuthForm onSubmit={login} login='sad'/>
         </div>
     );

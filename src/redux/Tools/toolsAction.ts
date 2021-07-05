@@ -53,7 +53,3 @@ export const setPencil = (statusPencil: boolean): setPencilAction => {
     }
 }
 
-// export type ToolRectangleActions = setRectangleAction
-// export type ToolLineActions = setLineAction
-// export type ToolPencilAction = setPencilAction
-

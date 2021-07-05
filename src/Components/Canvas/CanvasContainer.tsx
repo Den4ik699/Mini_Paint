@@ -17,7 +17,6 @@ const CanvasContainer = (props: IColor) => {
         stroke: props.color,
         strokeWidth: props.widthLine,
     }
-    console.log(props.dataTools)
 
     function createElement(x1, y1, x2, y2) {
         if (tool[0][0] === 'statusRect') {
@@ -46,7 +45,6 @@ const CanvasContainer = (props: IColor) => {
         contextRef.current = canvas.getContext('2d') as CanvasRenderingContext2D
         contextRef.current.lineCap = 'round';
         contextRef.current.lineWidth = 5;
-        // contextRef.current = contextRef.current;
 
     }, [])
 

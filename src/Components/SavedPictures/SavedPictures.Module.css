@@ -1,0 +1,15 @@
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3px;
+}
+
+.root {
+    cursor: pointer;
+    max-width: 345px;
+    margin: 10px;
+}
+
+.root:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

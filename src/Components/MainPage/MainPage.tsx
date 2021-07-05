@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from "../Header/Header";
 import CanvasContainer from "../Canvas/CanvasContainer";
 import ToolBar from "../ToolBar/ToolBar";
 
@@ -21,9 +20,9 @@ const MainPage: React.FC<IColor> = ({
                                         onChangeWidth, addPencil, addRectangle
                                         , dataTools, addLine, addCircle
                                     }) => {
+
     return (
         <>
-            <Header/>
             <ToolBar widthLine={widthLine}
                      onChangeWidth={onChangeWidth}
                      color={color}
